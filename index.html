@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading Page</title>
+	<style>
+
+        body{
+            margin: -5%;
+            height: 100%;
+            background-color: #040404;
+        }
+
+
+        .astroImg{
+            position: relative;
+            top: 45%;
+            left: 40%;
+            height: 20%;
+            width: 20%;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  .loader {
+    position: relative;
+    left: 45%;
+    border-top: 5%;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text{
+    color: #f3f3f3;
+    position: relative;
+    left: 46%;
+    margin-top: 3%;
+}
+
+	</style>
+</head>
+<body>
+	<div id="loading">
+		<img src="custom-image.png" alt="Loading...">
+	</div>
+
+    <div class="loading-crypto">
+        <img src="img/loader.png" class="astroImg">
+    </div>
+    <br>
+    <div class="loader"></div>
+    <div class="loading-text">
+        <h3>Loading...</h3>
+    </div>
+    <script>
+		setTimeout(function() {
+
+			window.location.href = "home.html";
+		}, 5000);
+	</script>
+</body>
+</html>
